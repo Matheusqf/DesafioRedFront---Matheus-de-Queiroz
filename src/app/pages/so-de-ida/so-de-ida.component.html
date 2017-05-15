@@ -18,32 +18,95 @@
         <section class="content-secundary">
 
             <div class="content-secundary-title">Descubra destinos</div>
-            <div class="content-secundary-route">
-                <div class="content-secundary-name">DATAS</div>
+            <div class="content-secundary-route2" [class.content-secundary-route]="'datas' === selectedOption" (click)="onSelectO('datas')">
+                <div class="content-secundary-name2" [class.content-secundary-name]="'datas' === selectedOption">DATAS</div>
                 <div class="content-secundary-option">28 de mai - 1 de jun</div>
             </div>
-            <div class="content-secundary-route2">
-                <div class="content-secundary-name2">LUGARES</div>
+            <div class="content-secundary-route2" [class.content-secundary-route]="'lugares' === selectedOption" (click)="onSelectO('lugares')">
+                <div class="content-secundary-name2" [class.content-secundary-name]="'lugares' === selectedOption">LUGARES</div>
                 <div class="content-secundary-option">Em qualquer lugar</div>
             </div>
-            <div class="content-secundary-route2">
-                <div class="content-secundary-name2">INTERESSES</div>
+            <div class="content-secundary-route2" [class.content-secundary-route]="'interesses' === selectedOption" (click)="onSelectO('interesses')">
+                <div class="content-secundary-name2" [class.content-secundary-name]="'interesses' === selectedOption">INTERESSES</div>
                 <div class="content-secundary-option">Qualquer destino</div>
             </div>
 
-            <div class="menu-items-row">
-                <div class="menu-items">maio</div>
-                <div class="menu-items">junho</div>
-                <div class="menu-items">julho</div>
-                <div class="menu-items">agosto</div>
-                <div class="menu-items">setembro</div>
-                <div class="menu-items">outubro</div>    
+
+            <!-- --- caso DATAS --- -->
+            <div *ngIf = "'datas' === selectedOption">
+                <div class="menu-items-row">
+                    <div class="menu-items" *ngFor="let month of months"
+                    [class.selected]="month === selectedMonth"
+                    (click)="onSelectM(month)">
+                        {{month.name}}
+                    </div>  
+                </div>
+                <div class="menu-items-row"> 
+                    <div class="menu-items" *ngFor="let wkday of wkdays"
+                    [class.selected]="wkday === selectedWkDay"
+                    (click)="onSelectWD(wkday)">
+                        {{wkday.name}}
+                    </div>
+                </div>
             </div>
-            <div class="menu-items-row">
-                <div class="menu-items">Fim de semana</div>
-                <div class="menu-items">1 semana</div>
-                <div class="menu-items">duas semanas</div> 
+            <!-- --- fim de caso DATAS --- -->
+
+
+            <!-- --- caso LUGARES --- -->
+            <div *ngIf = "'lugares' === selectedOption">
+                <div class="menu-items-row">
+                    <div class="menu-items">América do Norte</div>
+                    <div class="menu-items">América do Sul</div>
+                    <div class="menu-items">África</div>
+                    <div class="menu-items">Europa</div>
+                    <div class="menu-items">Ásia</div>
+                    <div class="menu-items">Oceania</div>    
+                </div>
+                <div class="menu-items-row">
+                    <input type="text" class="ipt" placeholder="Insira a região ou país">
+                </div>
             </div>
+            <!-- --- fim de caso LUGARES --- -->
+
+            <!-- --- caso INTERESSES --- -->
+
+            <div *ngIf = "'interesses' === selectedOption">
+                <div class="menu-items-row">
+                    <div class="menu-items">Alimento</div>
+                    <div class="menu-items">Cultura</div>
+                    <div class="menu-items">Desporto de inverno</div>
+                    <div class="menu-items">Ecoturismo</div>
+                    <div class="menu-items">Ilha</div>
+                    <div class="menu-items">Lua de mel</div>  
+                    <div class="menu-items">Natureza</div>
+                    <div class="menu-items">Praia</div>
+                    <div class="menu-items">Turismo de aventura</div>
+                    <div class="menu-items">Vida selvagem</div>
+                    <div class="menu-items">ao ar livre</div>
+                    <div class="menu-items">Compras</div>    
+                </div>
+            </div>
+            <!-- --- fim de caso INTERESSES --- -->
+
+        </section>
+
+        <section class="">
+
+            <div *ngFor="let city of cities">
+                <!--<img  src="{{city.img}}" alt="Norway">
+                <div class="w3-container w3-center">
+                    <p>The Troll's tongue in Hardanger, Norway</p>
+                </div>-->
+                <div class="card">
+                    <img src="{{city.img}}" alt="Avatar" id="card">
+                    <div class="container" [ngStyle]="{'background-color': city.color}">
+                        <p id="p1">{{city.name}}</p> 
+                        <p>{{city.color}}</p> 
+                    </div>
+                </div>
+            </div>
+
+            
 
         </section>
 

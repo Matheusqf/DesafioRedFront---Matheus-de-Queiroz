@@ -13,6 +13,16 @@
     cursor: pointer;
 }
 
+.menu-items.selected:hover {
+      background-color: #BBD8DC !important;
+      color: white;
+    }
+
+.menu-items:hover {
+      color: #607D8B;
+      background-color: #DDD;
+      left: .1em;
+    }
 
 .content {
     position: relative;
@@ -139,4 +149,12 @@
 
 .clear{
     clear:both;
+}
+
+
+
+.selected {
+
+        background-color: #4995fb  !important;
+        color: white;
 }
