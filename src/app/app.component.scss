@@ -50,6 +50,29 @@
         }
  }
 
+ #select {
+     display: inline-block;
+        padding: 0 8px;
+        margin: 6px 0;
+        height: 27px;
+        min-width: 54px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        cursor: default;
+        border-color: #ccc;
+        background-color: #eee;
+        background-image: -webkit-linear-gradient(top,#eee,#e0e0e0);
+ }
+
 
 .left {
     float: left;

@@ -21,29 +21,6 @@
 
 
 .content-primary{
-    button {
-    display: inline-block;
-    padding: 0 8px;
-    margin: 6px 0;
-    height: 27px;
-    min-width: 54px;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    font-size: 11px;
-    font-weight: bold;
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    cursor: default;
-    border-color: #ccc;
-    background-color: #eee;
-    background-image: -webkit-linear-gradient(top,#eee,#e0e0e0);
-    }
-
     input {
     background: white;
     border: 1px solid #d9d9d9;
@@ -61,8 +38,32 @@
     }
 
     select {
-        
-    }
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 2px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 8px 3px;
+   overflow: hidden;
+   padding: 5px 3px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 150px;
+   height: 30px;
+   }
+   
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .content-secundary {
@@ -126,4 +127,8 @@
 
 .clear{
     clear:both;
+}
+
+#add{
+    margin-left: 6px;
 }

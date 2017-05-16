@@ -2,17 +2,43 @@
     <div class="content">
         <section class="content-primary">
 
-                <input type="text" class="" placeholder="Saindo de onde?">
-                <input type="date" class="">
-                <input type="text" class="" placeholder="Para onde vai?">
-                <input type="date" class="">
-                <br>
+                <div>
+                    <input type="text" class="" placeholder="Saindo de onde?">
+                    <input type="date" class="">
+                    <input type="text" class="" placeholder="Para onde vai?">
+                    <input type="date" class="">
+                </div>
 
-                <select name="" id="" class="">Paradas</select>
-                <select name="" id="" class="">Companhia aérea</select>
-                <select name="" id="" class="">Horários</select>
-                <select name="" id="" class="">Mais</select>
-            
+                <div>
+                    <select id="soflow">
+                        <option>Paradas</option>
+                        <option>Qualquer</option>
+                        <option>Sem escalas</option>
+                        <option>Até 1 parada</option>
+                        <option>Até 2 paradas</option>
+                    </select>
+                    <select id="soflow">
+                        <option>Comp. aérea</option>
+                        <option>Red Rocket</option>
+                        <option>Oneworld</option>
+                        <option>SkyTeam</option>
+                        <option>Star Alliance</option>                    
+                    </select>
+                    <select id="soflow">
+                        <option>Horários</option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                    <select id="soflow">
+                        <option>Duração</option>
+                        <option>Menos de 1hr</option>
+                        <option>Menos de 2hrs</option>
+                        <option>Menos de 5hrs</option>
+                        <option>Menos de 10hrs</option>
+                    </select>
+                </div>
+          
         </section>
 
         <section class="content-secundary">
@@ -81,20 +107,14 @@
         <section class="">
 
             <div *ngFor="let city of cities">
-                <!--<img  src="{{city.img}}" alt="Norway">
-                <div class="w3-container w3-center">
-                    <p>The Troll's tongue in Hardanger, Norway</p>
-                </div>-->
                 <div class="card">
                     <img src="{{city.img}}" alt="Avatar" id="card">
                     <div class="container" [ngStyle]="{'background-color': city.color}">
                         <p id="p1">{{city.name}}</p> 
-                        <p>{{city.color}}</p> 
+                        <p>{{city.tag}}</p> 
                     </div>
                 </div>
             </div>
-
-            
 
         </section>
 
